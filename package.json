@@ -4,7 +4,7 @@
   "description": "Adds an admin section to the hexo server",
   "main": "index.js",
   "scripts": {
-    "prepublish": "gulp build"
+    "prepublishOnly": "gulp build"
   },
   "repository": {
     "type": "git",
