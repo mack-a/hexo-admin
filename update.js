@@ -39,8 +39,9 @@ module.exports = function (model, id, update, callback, hexo) {
     Object.keys(hexo.config.metadata || {}).forEach(function (key) {
         preservedKeys.push(key);
     });
-    var prev_full = post.full_source,
-        full_source = prev_full;
+    var prev_full = post.full_source;
+    var full_source = prev_full;
+
     if (update.source && update.source !== post.source) {
         // post.full_source only readable ~ see: /hexo/lib/models/post.js
         full_source = hexo.source_dir + update.source;
