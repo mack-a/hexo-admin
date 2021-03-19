@@ -280,7 +280,8 @@ module.exports = function (app, hexo) {
             layout: 'draft',
             date: new Date(),
             author: hexo.config.author,
-            toc: true
+            toc: true,
+            sticky: 100
         };
         extend(postParameters, hexo.config.metadata || {});
         hexo.post.create(postParameters)
